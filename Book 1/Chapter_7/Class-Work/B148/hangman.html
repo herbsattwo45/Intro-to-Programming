@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hangman!</title>
+</head>
+
+<body>
+    <h1>Hangman!</h1>
+
+    <script>
+        // List of possible words (all lowercase)
+        var wordList = [
+            "javascript",
+            "computer",
+            "school",
+            "coding",
+            "internet",
+            "keyboard",
+            "mouse",
+            "screen",
+            "program",
+            "student"
+        ];
+
+        // Pick a random word
+        var word = wordList[Math.floor(Math.random() * wordList.length)];
+
+        // Create empty answer (_ _ _)
+        var answerArray = [];
+        for (var i = 0; i < word.length; i++) {
+            answerArray[i] = "_";
+        }
+
+        // Letters left to guess
+        var remainingLetters = word.length;
+
+        // Guess limit
+        var maxGuesses = 10;
+        var guessesUsed = 0;
+
+        // Game loop
+        while (remainingLetters > 0 && guessesUsed < maxGuesses) {
+
+            // Show progress
+            alert(answerArray.join(" ") +
+                  "\nGuesses left: " + (maxGuesses - guessesUsed));
+
+            // Ask user for a letter
+            var guess = prompt("Guess a letter");
+
+            // Stop game if Cancel is pressed
+            if (guess === null) {
+                break;
+            }
+
+            // Convert capital letters to lowercase
+            guess = guess.toLowerCase();
+
+            // Check for valid input
+            if (guess.length !== 1 || !guess.match(/[a-z]/)) {
+                alert("Type ONE letter only");
+                continue;
+            }
+
+            // Check the word
+            for (var j = 0; j < word.length; j++) {
+
+                // Only fill if letter matches AND spot is still _
+                if (word[j] === guess && answerArray[j] === "_") {
+                    answerArray[j] = guess;
+                    remainingLetters--;
+                }
+            }
+
+            // Count this guess
+            guessesUsed++;
+        }
+
+        // Show final word
+        alert(answerArray.join(" "));
+
+        // Win or lose message
+        if (remainingLetters === 0) {
+            alert("You win! The word was: " + word);
+        } else {
+            alert("Game over! The word was: " + word);
+        }
+    </script>
+</body>
+</html>
