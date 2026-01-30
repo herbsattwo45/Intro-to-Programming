@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hangman!</title>
+</head>
+
+<body>
+    <h1>Hangman!</h1>
+
+    <script>
+        // ---------------- WORD LIST ----------------
+        var wordList = [
+            "javascript",
+            "computer",
+            "school",
+            "coding",
+            "internet",
+            "keyboard",
+            "mouse",
+            "screen",
+            "program",
+            "student"
+        ];
+
+        // ---------------- FUNCTIONS ----------------
+
+        // Pick a random word
+        var pickWord = function () {
+            return wordList[Math.floor(Math.random() * wordList.length)];
+        };
+
+        // Create "_" for each letter
+        var setupAnswerArray = function (word) {
+            var answerArray = [];
+            for (var i = 0; i < word.length; i++) {
+                answerArray[i] = "_";
+            }
+            return answerArray;
+        };
+
+        // Show progress and hint info
+        var showPlayerProgress = function (answerArray, guessesLeft, hintUsed) {
+            alert(
+                answerArray.join(" ") +
+                "\nGuesses left: " + guessesLeft +
+                "\nType 'hint' for help: " + (hintUsed ? "USED" : "AVAILABLE")
+            );
+        };
+
+        // Get user input
+        var getGuess = function () {
+            var guess = prompt("Guess a letter or type 'hint'");
+            if (guess === null) {
+                return null;
+            }
+            return guess.toLowerCase();
+        };
+
+        // Update letters if guess is correct
+        var updateGameState = function (guess, word, answerArray) {
+            var matches = 0;
+
+            for (var i = 0; i < word.length; i++) {
+                if (word[i] === guess && answerArray[i] === "_") {
+                    answerArray[i] = guess;
+                    matches++;
+                }
+            }
+
+            return matches;
+        };
+
+        // Reveal ONE random hidden letter (hint)
+        var useHint = function (word, answerArray) {
+            var hiddenIndexes = [];
+
+            // Find all "_" positions
+            for (var i = 0; i < word.length; i++) {
+                if (answerArray[i] === "_") {
+                    hiddenIndexes.push(i);
+                }
+            }
+
+            // Pick a random hidden position
+            var randomIndex = hiddenIndexes[
+                Math.floor(Math.random() * hiddenIndexes.length)
+            ];
+
+            // Reveal that letter
+            answerArray[randomIndex] = word[randomIndex];
+
+            return 1; // One letter revealed
+        };
+
+        // Show final message
+        var showAnswerAndCongratulatePlayer = function (answerArray, word, won) {
+            alert(answerArray.join(" "));
+            if (won) {
+                alert("You win! The word was: " + word);
+            } else {
+                alert("Game over! The word was: " + word);
+            }
+        };
+
+        // ---------------- GAME SETUP ----------------
+
+        var word = pickWord();
+        var answerArray = setupAnswerArray(word);
+        var remainingLetters = word.length;
+
+        var maxGuesses = 10;
+        var guessesUsed = 0;
+        var hintUsed = false; // Track hint usage
+
+        // ---------------- GAME LOOP ----------------
+
+        while (remainingLetters > 0 && guessesUsed < maxGuesses) {
+
+            showPlayerProgress(
+                answerArray,
+                maxGuesses - guessesUsed,
+                hintUsed
+            );
+
+            var guess = getGuess();
+
+            if (guess === null) {
+                break;
+            }
+
+            // ---- HINT LOGIC ----
+            if (guess === "hint") {
+                if (hintUsed) {
+                    alert("You already used your hint!");
+                    continue;
+                }
+
+                remainingLetters -= useHint(word, answerArray);
+                hintUsed = true;
+                guessesUsed++;
+                continue;
+            }
+
+            // ---- INPUT CHECK ----
+            if (guess.length !== 1 || !guess.match(/[a-z]/)) {
+                alert("Type ONE letter only");
+                continue;
+            }
+
+            // ---- NORMAL GUESS ----
+            var correctGuesses = updateGameState(
+                guess,
+                word,
+                answerArray
+            );
+
+            remainingLetters -= correctGuesses;
+            guessesUsed++;
+        }
+
+        // ---------------- GAME END ----------------
+
+        showAnswerAndCongratulatePlayer(
+            answerArray,
+            word,
+            remainingLetters === 0
+        );
+
+    </script>
+</body>
+</html>
