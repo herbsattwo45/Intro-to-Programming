@@ -1,0 +1,16 @@
+body {
+    background-color: black;
+    color: red;
+    font-family: Arial;
+    text-align: left;
+}
+
+button {
+    background-color: yellow;
+    color: black;
+    padding: 5px;
+    border: none;
+}
+#firstThing{
+    color: white;
+}
