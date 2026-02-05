@@ -1,0 +1,40 @@
+/* Style the entire car container */
+#car {
+    font-family: Arial;      /* Use Arial font */
+    position: relative;      /* Allows the car to move left/right */
+    left: 0px;               /* Starting position from the left */
+}
+
+/* This is the car body */
+#body {
+    position: absolute;      /* Allows exact positioning */
+    top: 50px;               /* Pushes body down */
+    width: 80%;              /* Body width */
+    height: 100px;           /* Body height */
+    background-color: #000000; /* Black color */
+    text-align: center;      /* Centers text (if any) */
+}
+
+/* This is the back wheel */
+#backwheel {
+    position: absolute;      /* Lets us place it anywhere */
+    left: 10%;               /* Moves wheel to the left */
+    top: 130px;              /* Moves wheel down */
+    background-color: #ffffff; /* White wheel */
+    border: 3px solid black; /* Black border */
+    border-radius: 50%;      /* Makes it round */
+    width: 40px;             /* Wheel width */
+    height: 40px;            /* Wheel height */
+}
+
+/* This is the front wheel */
+#frontwheel {
+    position: absolute;      /* Lets us place it anywhere */
+    left: 55%;               /* Moves wheel to the right */
+    top: 130px;              /* Moves wheel down */
+    background-color: #ffffff; /* White wheel */
+    border: 3px solid black; /* Black border */
+    border-radius: 50%;      /* Makes it round */
+    width: 40px;             /* Wheel width */
+    height: 40px;            /* Wheel height */
+}

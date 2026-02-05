@@ -1,0 +1,86 @@
+/* Basic page font */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Robot container */
+#robot {
+    width: 300px;
+    height: 400px;
+    position: relative;
+    margin: 50px auto;
+}
+
+/* Robot head */
+#head {
+    width: 120px;
+    height: 120px;
+    background-color: #dadada;
+    border-radius: 15%;
+    position: absolute;
+    left: 90px;
+    top: 10px;
+}
+
+/* Eyes (same style for both) */
+.eye {
+    width: 25px;
+    height: 25px;
+    background-color: lightblue;
+    border-radius: 50%;
+    position: absolute;
+    top: 30px;
+}
+
+/* Left eye position */
+#lefteye {
+    left: 25px;
+}
+
+/* Right eye position */
+#righteye {
+    right: 25px;
+}
+
+/* Mouth (smiling shape) */
+#mouth {
+    width: 60px;
+    height: 20px;
+    background-color: red;
+    position: absolute;
+    left: 30px;
+    top: 70px;
+    border-radius: 0 0 20px 20px;
+}
+
+/* Robot body */
+#body {
+    width: 160px;
+    height: 180px;
+    background-color: #dadada;
+    position: absolute;
+    top: 140px;
+    left: 70px;
+    text-align: center;
+    padding-top: 20px;
+    border: 2px solid black;
+}
+
+/* Arms (same style) */
+.arm {
+    width: 20px;
+    height: 100px;
+    background-color: #cacaca;
+    position: absolute;
+    top: 150px;
+}
+
+/* Left arm position */
+#leftarm {
+    left: 40px;
+}
+
+/* Right arm position */
+#rightarm {
+    right: 40px;
+}
