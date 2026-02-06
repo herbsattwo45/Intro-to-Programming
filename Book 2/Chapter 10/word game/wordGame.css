@@ -1,0 +1,43 @@
+/* Page font */
+body {
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   font-style: italic;
+    background-color: azure;
+    
+}
+
+/* Input section on the left */
+#inputArea {
+    width: 45%;
+    float: left;
+}
+
+/* Story box on the right */
+#storyBox {
+    width: 45%;
+    float: left;
+    margin-left: 5%;
+    border: 1px dashed rgb(0, 255, 42);
+    padding: 10px;
+    color: rgb(255, 0, 0);
+    background-color: blue;
+    
+}
+
+/* Button spacing */
+button {
+    margin-top: 10px;
+    padding: 6px;
+    background-color: greenyellow;
+    color: red;
+    font-weight: bold;
+}
+h1 {
+ color: red;
+
+
+
+}
+
+
+

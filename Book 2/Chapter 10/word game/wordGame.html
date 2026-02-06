@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- Tells the browser this is an HTML file -->
+
+<html lang="en">
+<!-- Wraps the entire page -->
+
+<head>
+    <!-- Page information -->
+
+    <meta charset="UTF-8">
+    <!-- Allows normal text characters -->
+
+    <title>Simple Word Game</title>
+    <!-- Title in browser tab -->
+
+    <link rel="stylesheet" href="wordGame.css">
+    <!-- Links CSS file -->
+</head>
+
+<body>
+    <!-- Everything visible goes here -->
+
+    <h1>My Simple Word Game</h1>
+    <!-- Big title at the top -->
+
+    <div id="inputArea">
+        <!-- Left side input box -->
+
+        <p>Enter your words:</p>
+
+        <input type="text" id="adj">
+        <!-- Adjective input -->
+        <br>Adjective
+        <br><br>
+
+        <input type="text" id="noun">
+        <!-- Noun input -->
+        <br>Noun
+        <br><br>
+
+        <input type="text" id="verb">
+        <!-- Verb input -->
+        <br>Verb
+        <br><br>
+
+        <input type="text" id="place">
+        <!-- Place input -->
+        <br>Place
+        <br><br>
+
+        <input type="text" id="animal">
+        <!-- Animal input -->
+        <br>Animal
+        <br><br>
+
+        <button id="makeStory">Make Story</button>
+        <!-- Button -->
+    </div>
+
+    <div id="storyBox">
+        <!-- Right side story box -->
+
+        <h2>Your Story</h2>
+        <!-- Heading inside box -->
+
+        <p id="story"></p>
+        <!-- Story appears here -->
+    </div>
+
+    <script src="wordGame.js"></script>
+    <!-- Links JavaScript -->
+</body>
+
+</html>
