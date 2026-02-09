@@ -1,0 +1,49 @@
+/* ----------------------------
+   BODY STYLING
+   ---------------------------- */
+body {
+    font-family: Arial, sans-serif; /* Use a clean readable font */
+    background-color: #f0f0f0;      /* Light gray background */
+    margin: 20px;                   /* Add space around content */
+}
+
+/* ----------------------------
+   INSTRUCTIONS BOX
+   ---------------------------- */
+#instructions {
+    width: 500px;                   /* Fixed width for readability */
+    background-color: #fff;         /* White background */
+    padding: 10px;                  /* Inner spacing */
+    border: 2px solid #000;         /* Black border */
+    margin-bottom: 20px;            /* Space below instructions */
+}
+
+/* ----------------------------
+   CAR IMAGE
+   ---------------------------- */
+#car {
+    cursor: pointer;                /* Cursor becomes pointer when hovering */
+    display: block;                 /* Make image behave like a block element */
+    margin-bottom: 20px;            /* Space below car image */
+}
+
+/* Resize the large car image */
+#car img {
+    width: 150px;                   /* Scale down from original 840px */
+    height: auto;                   /* Keep aspect ratio */
+}
+
+/* ----------------------------
+   STOP BUTTON
+   ---------------------------- */
+#stopButton {
+    width: 120px;                   /* Button width */
+    height: 50px;                   /* Button height */
+    background-color: white;        /* Button background color */
+    color: red;                     /* Text color */
+    text-align: center;             /* Center text horizontally */
+    font-size: 24px;                /* Large font for readability */
+    line-height: 50px;              /* Center text vertically */
+    cursor: pointer;                /* Pointer cursor on hover */
+    border: 2px solid red;          /* Red border */
+}
