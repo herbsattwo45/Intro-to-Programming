@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Character encoding -->
+    <meta charset="UTF-8">
+
+    <!-- Compatibility for older browsers -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Makes the page responsive on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page title shown in the browser tab -->
+    <title>Wish List</title>
+
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="wishlist2.css">
+</head>
+<body>
+
+    <!-- 
+      MAIN PAGE CONTAINER
+      Everything lives inside this div
+    -->
+    <div id="listPage" class="print">
+
+        <!-- Page heading -->
+        <h1>My Wish List</h1>
+
+        <!-- 
+          FORM AREA
+          Contains input and buttons
+        -->
+        <div id="formArea">
+
+            <!-- Label + input field -->
+            <label>
+                What I want:
+                <input type="text" id="iWant" />
+            </label>
+
+            <!-- Button to add item -->
+            <button type="button" id="addIt">Add It!</button>
+
+            <br><br>
+
+            <!-- Button to print the list -->
+            <button type="button" id="printable">Print Your List</button>
+        </div>
+
+        <!-- 
+          This unordered list will hold wishlist items
+          JavaScript adds <li> items here
+        -->
+        <ul id="wishList"></ul>
+
+    </div>
+
+    <!-- Link to the JavaScript file -->
+    <script src="wishlist2.js"></script>
+</body>
+</html>
