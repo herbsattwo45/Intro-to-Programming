@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Lost Signal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="story.css">
+</head>
+
+<body>
+    <div id="container">
+        <div id="story"></div>
+
+        <div id="siteFooter">
+            <div id="question"></div>
+            <div id="answer">
+                <input type="text" id="yourAnswer" placeholder="Type your answer here..." />
+                <button type="button" id="submit">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hidden story sections -->
+    <div class="storyPart" id="answer01">
+        <p>You are alone aboard your exploration ship when your console lights up.</p>
+        <p>A distress signal has been detected from an abandoned space station drifting near a black hole.</p>
+        <p>No one has responded to that signal for over 20 years.</p>
+        <p>Do you investigate?</p>
+    </div>
+
+    <div class="storyPart" id="answer11">
+        <p>You set a course for the station.</p>
+        <p>As you dock, the lights flicker on. The air is cold and silent.</p>
+        <p>You hear a faint noise echoing through the halls.</p>
+        <p>Do you explore the control room or the crew quarters?</p>
+    </div>
+
+    <div class="storyPart" id="answer12">
+        <p>You ignore the signal and continue your mission.</p>
+        <p>Days later, you see the station vanish into the black hole.</p>
+        <p>Some mysteries are better left unsolved.</p>
+    </div>
+
+    <div class="storyPart" id="answer21">
+        <p>You enter the control room.</p>
+        <p>The screens suddenly activate, revealing logs from the past.</p>
+        <p>The crew uploaded their consciousness into the station to survive.</p>
+        <p>You are not alone.</p>
+    </div>
+
+    <div class="storyPart" id="answer22">
+        <p>You search the crew quarters.</p>
+        <p>You find personal belongings—but no bodies.</p>
+        <p>A warning message appears: “RUN.”</p>
+        <p>You barely escape as the station powers up behind you.</p>
+    </div>
+
+    <div class="storyPart" id="err0">
+        <p>Please answer YES or NO.</p>
+    </div>
+
+    <div class="storyPart" id="err1">
+        <p>Please answer CONTROL ROOM or CREW QUARTERS.</p>
+    </div>
+
+    <script src="story.js"></script>
+</body>
+</html>
