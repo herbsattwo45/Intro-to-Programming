@@ -1,0 +1,73 @@
+/* Reset default browser spacing */
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f8;
+}
+
+/* Page heading styling */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Main container holding all day cards */
+#weatherContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+/* Base style for each day card */
+.weather-day {
+    width: 13%;
+    min-height: 180px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    font-size: 13px;
+}
+
+/* ===== Weather color themes ===== */
+
+/* Bright and warm */
+.Sunny {
+    background-color: #ffeb3b;
+}
+
+/* Slight clouds */
+.PartlySunny {
+    background-color: #fff59d;
+}
+
+/* Mostly clouds */
+.PartlyCloudy {
+    background-color: #cfd8dc;
+}
+
+/* Heavy clouds */
+.Cloudy {
+    background-color: #b0bec5;
+}
+
+/* Rain */
+.Raining {
+    background-color: #4fc3f7;
+}
+
+/* Snow */
+.Snowing {
+    background-color: #e1f5fe;
+}
+
+/* Storm */
+.Thunderstorm {
+    background-color: #424242;
+    color: white;
+}
+
+/* Fog */
+.Foggy {
+    background-color: #eeeeee;
+}

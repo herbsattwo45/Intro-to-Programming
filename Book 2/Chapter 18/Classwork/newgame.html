@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zombie Survival</title>
+    <link rel="stylesheet" href="newgame.css">
+</head>
+<body>
+
+    <h1> Zombie Survival Game</h1>
+
+    <!-- Display how much food is left -->
+    <p>Food left: <span id="food">0</span> units</p>
+
+    <!-- Player choice -->
+    <label>
+        Food eaten per day:
+        <input type="number" id="foodPerDay" value="2" min="1">
+    </label>
+
+    <br><br>
+
+    <!-- Start survival -->
+    <button id="startSurvival">Start Survival</button>
+
+    <!-- Game log -->
+    <div id="log"></div>
+
+    <script src="newgame.js"></script>
+</body>
+</html>

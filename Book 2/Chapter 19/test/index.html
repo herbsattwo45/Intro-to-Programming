@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Makes sure text works properly -->
+    <meta charset="UTF-8">
+
+    <!-- Mobile friendly scaling -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Browser tab title -->
+    <title>Lemonade Stand Game</title>
+
+    <!-- Connect CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- WEATHER FORECAST (JS fills this automatically) -->
+    <div id="5DayWeather"></div>
+
+    <br clear="all">
+
+    <!-- PLAYER INPUT AREA -->
+    <div id="orderForm">
+
+        <label>
+            How many glasses of lemonade will you make?
+            <input type="number" id="numGlasses" placeholder="Example: 60">
+        </label>
+
+        <label>
+            Price per glass ($):
+            <input type="number" id="glassPrice" placeholder="Example: 1.25">
+        </label>
+
+        <!-- START GAME -->
+        <button id="OpenTheStand">Open The Stand</button>
+    </div>
+
+    <!-- RESULTS PRINT HERE -->
+    <div id="result"></div>
+
+    <!-- Connect JavaScript -->
+    <script src="main.js"></script>
+
+</body>
+</html>
